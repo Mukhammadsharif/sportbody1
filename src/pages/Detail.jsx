@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import BackgroundImage from '../assets/image-backs/main.png';
 import {useNavigation} from '@react-navigation/native';
-import {BackIcon} from '../helpers/Svgs';
+import {BackIcon, CalendarIcon} from '../helpers/Svgs';
 import Kal from '../assets/image-backs/detail-image.png';
 
 const {height} = Dimensions.get('window');
@@ -26,6 +26,10 @@ export default function Detail({route}) {
         <View style={styles.row}>
           <TouchableOpacity onPress={() => navigation.navigate(routeName)}>
             <BackIcon />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Statistics')}>
+            <CalendarIcon />
           </TouchableOpacity>
         </View>
         <Image source={Kal} style={styles.image} />

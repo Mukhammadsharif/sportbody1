@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import BackgroundImage from '../assets/image-backs/main.png';
 import {useNavigation} from '@react-navigation/native';
-import {Burger, ChevronRight} from '../helpers/Svgs';
+import {Burger, CalendarIcon, ChevronRight} from '../helpers/Svgs';
 import {plan} from '../data/plan';
 import Kal from '../assets/images/kal.png';
 
@@ -26,6 +26,10 @@ export default function TenDays() {
         <View style={styles.row}>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Burger />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigation.navigate('Statistics')}>
+            <CalendarIcon />
           </TouchableOpacity>
         </View>
 
